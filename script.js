@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'webdata.json', true);
+xhr.open('GET', 'https://raw.githubusercontent.com/Ritik-Swami-Jr/DevOnDuty/main/webdata.json', true);
 
 xhr.onload = function() {
     if (this.status === 200) {
@@ -39,7 +39,7 @@ function display_container(e) {
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'webdata.json', true);
+    xhr.open('GET', 'https://raw.githubusercontent.com/Ritik-Swami-Jr/DevOnDuty/main/webdata.json', true);
 
     xhr.onload = function() {
         if (this.status === 200) {
