@@ -363,11 +363,13 @@ section .s-1 {
 
 .website-design-pc {
     width: 70%;
+    overflow: hidden;
 }
 
 .website-design-mobile {
     width: 30%;
     margin-left: 10px;
+    overflow: hidden;
 }
 
 .btn {
@@ -404,7 +406,8 @@ section .s-1 {
 
 .image {
     height: 100%;
-    width: auto;
+    width: 100%;
+    
 }
 
 div#close {
