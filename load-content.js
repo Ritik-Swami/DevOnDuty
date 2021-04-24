@@ -65,7 +65,7 @@ footer.send();
 // animate.send();
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'cards.json', true);
+xhr.open('GET', 'https://raw.githubusercontent.com/Ritik-Swami-Jr/DevOnDuty/main/cards.json', true);
 
 xhr.onload = function() {
     if (this.status === 200) {
