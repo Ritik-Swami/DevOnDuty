@@ -1,11 +1,11 @@
 var header = new XMLHttpRequest();
 var main = new XMLHttpRequest();
 var footer = new XMLHttpRequest();
-var animate = new XMLHttpRequest();
+// var animate = new XMLHttpRequest();
 header.open('GET', 'templates/header.html', true);
 main.open('GET', 'templates/main.html', true);
 footer.open('GET', 'templates/footer.html', true);
-animate.open('GET', 'templates/animate.html', true);
+// animate.open('GET', 'templates/animate.html', true);
 
 header.onload = function() {
     if (this.status === 200) {
@@ -37,15 +37,15 @@ main.onload = function() {
     }
 }
 footer.onload = function() {
-    if (this.status === 200) {
-        document.getElementById('footer').innerHTML = this.responseText;
+        if (this.status === 200) {
+            document.getElementById('footer').innerHTML = this.responseText;
+        }
     }
-}
-animate.onload = function() {
-    if (this.status === 200) {
-        document.getElementById('animate').innerHTML = this.responseText;
-    }
-}
+    // animate.onload = function() {
+    //     if (this.status === 200) {
+    //         document.getElementById('animate').innerHTML = this.responseText;
+    //     }
+    // }
 
 header.onerror = function() {
     console.log('Requist Erorr...');
@@ -54,15 +54,15 @@ main.onerror = function() {
     console.log('Requist Erorr...');
 }
 footer.onerror = function() {
-    console.log('Requist Erorr...');
-}
-animate.onerror = function() {
-    console.log('Requist Erorr...');
-}
+        console.log('Requist Erorr...');
+    }
+    // animate.onerror = function() {
+    //     console.log('Requist Erorr...');
+    // }
 header.send();
 main.send();
 footer.send();
-animate.send();
+// animate.send();
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://raw.githubusercontent.com/Ritik-Swami-Jr/DevOnDuty/main/cards.json', true);
