@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'scss/variables';
+@import 'scss/utility';
+:root {
+    --bg-color: rgb(17, 17, 17);
+    --text-color: rgb(221, 221, 221);
+    --card-bg-color: rgba(221, 221, 221, .2);
+    --text-color-hover: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    display: block;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden !important;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    transition: all 1s ease-in-out;
+    /* Standard */
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(red, blue);
+    outline: 1px solid slategrey;
+}
+
+// @import 'scss/animate';
+@import 'scss/header';
+@import 'scss/main';
+@import 'scss/footer';
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden !important;
+    }
+}

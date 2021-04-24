@@ -1,0 +1,44 @@
+<nav>
+    <div class="logo">
+        <div class="logo-icon">
+            <img src="../assets/main/logo.png" alt="" srcset="">
+        </div>
+        <span class="unselectable">Dev On Duty</span>
+    </div>
+    <div class="nav-items">
+        <ul>
+            <li class="nav-item unselectable" id="home" onclick="herf(this.id)">Home</li>
+            <li class="nav-item unselectable" id="about" onclick="herf(this.id)">About</li>
+            <li class="nav-item unselectable" id="contact" onclick="herf(this.id)">Contact</li>
+            <li class="dark-light" onclick="dark_light()" id="dark-light"><i class="fa fa-adjust"></i></li>
+        </ul>
+        <span onclick="nav_menu()">&#9776;</span>
+        <div id="nav-menu" class="sidenav">
+            <span class="closebtn unselectable" id="side-navbar-close-btn" onclick="closeNav()">&times;</span>
+            <ul>
+                <li class="side-nav-item unselectable" id="sn-home-btn" onclick="herf(this.id)">Home</li>
+                <li class="side-nav-item unselectable" id="sn-about-btn" onclick="herf(this.id)">About</li>
+                <li class="side-nav-item unselectable" id="sn-contact-btn" onclick="herf(this.id)">Contact</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="h-header" class="home">
+    <div class="h-header unselectable">
+        <h1>Dev</h1>
+        <h1>On</h1>
+        <h1>Duty</h1>
+    </div>
+</section>
+
+<section id="a-header" class="about">
+    <div class="a-header unselectable">
+        <h1>About</h1>
+    </div>
+</section>
+
+<section id="c-header" class="contact">
+    <div class="c-header unselectable">
+        <h1>Contact</h1>
+    </div>
+</section>

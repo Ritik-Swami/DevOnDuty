@@ -1,0 +1,58 @@
+#animate {
+    .animate {
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        z-index: 1;
+        transition: .2s linear;
+    }
+    .a-1 {
+        top: -50vh;
+        left: -50vh;
+        height: 100vmin;
+        width: 100vmin;
+        border: 2px solid rgb(255, 255, 255);
+        background-image: linear-gradient(to top left, red, blue);
+    }
+    .a-2 {
+        top: 50vh;
+        right: -50vh;
+        height: 100vmin;
+        width: 100vmin;
+        border: 2px solid rgb(255, 255, 255);
+        background-image: linear-gradient(to top left, red, blue);
+    }
+    .a-3 {
+        top: 90vh;
+        left: -10vh;
+        height: 50vmin;
+        width: 50vmin;
+        border: 2px solid rgb(255, 255, 255);
+        background-image: linear-gradient(to top left, red, blue);
+    }
+    .a-4 {
+        top: 20vh;
+        right: 30vw;
+        height: 30vmin;
+        width: 30vmin;
+        border: 2px solid rgb(255, 255, 255);
+        background-image: linear-gradient(to top right, rgb(21, 180, 0), rgb(0, 183, 255));
+    }
+    .a-5 {
+        top: -50vh;
+        left: -50vh;
+        height: 100vmin;
+        width: 100vmin;
+        border: 2px solid rgb(255, 255, 255);
+        background-image: linear-gradient(to top left, red, blue);
+    }
+    .animate:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #animate {
+        display: none;
+    }
+}

@@ -1,72 +1,162 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://raw.githubusercontent.com/Ritik-Swami-Jr/DevOnDuty/main/webdata.json', true);
-
-xhr.onload = function() {
-    if (this.status === 200) {
-        var webdata = JSON.parse(this.responseText);
-        var output = '';
-        for (var i in webdata) {
-            output += "<div class='card c-" + i + "' id='" + webdata[i].id + "' onclick='display_container(this.id)'>" +
-                "<h1>" + webdata[i].card + "</h1>" +
-                "<p>" + webdata[i].title + "</p>" +
-                "</div>"
-        }
-        document.getElementById('cards').innerHTML = output;
-    }
+function close_popup() {
+    document.getElementById("pop-up-window").style.display = 'none';
 }
-
-xhr.send();
-
-var container_xml = new XMLHttpRequest();
-container_xml.open('GET', 'templates/container.html', true);
-
-container_xml.onload = function() {
-    if (this.status === 200) {
-        document.getElementById('info-container').innerHTML = this.responseText;
-    }
-}
-
-container_xml.onerror = function() {
-    console.log('Requist Erorr...');
-}
-container_xml.send();
-
-
 
 function display_container(e) {
     const web_container_data = document.getElementById(e);
-    document.getElementById('info-container').style.display = 'block';
+    document.getElementById('pop-up-window').style.display = 'block';
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://raw.githubusercontent.com/Ritik-Swami-Jr/DevOnDuty/main/webdata.json', true);
+    xhr.open('GET', 'cards.json', true);
 
     xhr.onload = function() {
         if (this.status === 200) {
-            var webdata = JSON.parse(this.responseText);
-            for (var i in webdata) {
-                if (webdata[i].id == e) {
-                    document.getElementById('box-container-header').innerHTML = webdata[i].title;
-                    document.getElementById('desktop-img').src = webdata[i].desktopimg;
-                    document.getElementById('mobile-img').src = webdata[i].mobileimg;
-                    console.log(webdata[i].download_link, webdata[i].visit_link + "LINK AVAILABLE");
-                    document.getElementById('download_link').id = webdata[i].download_link;
-                    document.getElementById('visit_link').id = webdata[i].visit_link;
+            var card = JSON.parse(this.responseText);
+            for (var i in card) {
+                if (card[i].id == e) {
+                    document.getElementById('card-title').innerHTML = card[i].title;
+                    document.getElementById('desktop-img').src = card[i].desktopimg;
+                    document.getElementById('mobile-img').src = card[i].mobileimg;
+                    document.getElementById('download_link').id = card[i].download_link;
+                    document.getElementById('visit_link').id = card[i].visit_link;
                 };
             }
         }
     }
 
     xhr.send();
-    console.log(e)
 }
-
-function close_container() {
-    document.getElementById('info-container').style.display = 'none';
-}
-
-const click = document.getElementById('card').addEventListener("click", link);
 
 function link(id) {
-    window.location.assign(id)
+    window.open(id, "_blank");
+}
+
+function herf(id) {
+    const home = document.getElementsByClassName('home');
+    const about = document.getElementsByClassName('about');
+    const contact = document.getElementsByClassName('contact');
+
+    if (id === "home") {
+        for (i = 0; i < home.length; i++) {
+            home[i].style.display = "block";
+        }
+        for (i = 0; i < about.length; i++) {
+            about[i].style.display = "none";
+        }
+        for (i = 0; i < contact.length; i++) {
+            contact[i].style.display = "none";
+        }
+
+        document.title = "Dev On Duty";
+        return
+    }
+    if (id === "about") {
+        for (i = 0; i < home.length; i++) {
+            home[i].style.display = "none";
+        }
+        for (i = 0; i < about.length; i++) {
+            about[i].style.display = "block";
+        }
+        for (i = 0; i < contact.length; i++) {
+            contact[i].style.display = "none";
+        }
+
+        document.title = "DoD About";
+        return
+    }
+    if (id === "contact") {
+        for (i = 0; i < home.length; i++) {
+            home[i].style.display = "none";
+        }
+        for (i = 0; i < about.length; i++) {
+            about[i].style.display = "none";
+        }
+        for (i = 0; i < contact.length; i++) {
+            contact[i].style.display = "block";
+        }
+
+        document.title = "DoD Contact";
+        return
+    }
+    if (id === "sn-home-btn") {
+        for (i = 0; i < home.length; i++) {
+            home[i].style.display = "block";
+        }
+        for (i = 0; i < about.length; i++) {
+            about[i].style.display = "none";
+        }
+        for (i = 0; i < contact.length; i++) {
+            contact[i].style.display = "none";
+        }
+
+        document.getElementById("nav-menu").style.width = "0";
+        document.getElementById("side-navbar-close-btn").style.transform = "rotate(0deg)";
+
+        document.title = "Dev On Duty";
+        return
+    }
+    if (id === "sn-about-btn") {
+        for (i = 0; i < home.length; i++) {
+            home[i].style.display = "none";
+        }
+        for (i = 0; i < about.length; i++) {
+            about[i].style.display = "block";
+        }
+        for (i = 0; i < contact.length; i++) {
+            contact[i].style.display = "none";
+        }
+
+        document.getElementById("nav-menu").style.width = "0";
+        document.getElementById("side-navbar-close-btn").style.transform = "rotate(0deg)";
+        document.title = "DoD About";
+        return
+    }
+    if (id === "sn-contact-btn") {
+        for (i = 0; i < home.length; i++) {
+            home[i].style.display = "none";
+        }
+        for (i = 0; i < about.length; i++) {
+            about[i].style.display = "none";
+        }
+        for (i = 0; i < contact.length; i++) {
+            contact[i].style.display = "block";
+        }
+
+        document.getElementById("nav-menu").style.width = "0";
+        document.getElementById("side-navbar-close-btn").style.transform = "rotate(0deg)";
+        document.title = "DoD Contact";
+        return
+    }
+}
+
+function dark_light() {
+    var r = document.querySelector(':root');
+    const bg = document.body.id;
+    if (bg === "dark") {
+        document.getElementById("dark-light").style.transform = "rotate(360deg)";
+        r.style.setProperty("--bg-color", "#ddd");
+        r.style.setProperty("--text-color", "#222");
+        r.style.setProperty("--text-color-hover", "black");
+        r.style.setProperty("--card-bg-color", "rgba(17, 17, 17, .05)");
+        document.body.id = "light";
+    } else {
+        document.getElementById("dark-light").style.transform = "rotate(0deg)";
+        r.style.setProperty("--text-color", "#ddd");
+        r.style.setProperty("--bg-color", "rgb(17, 17, 17)");
+        r.style.setProperty("--text-color-hover", "white");
+        r.style.setProperty("--card-bg-color", "rgba(221, 221, 221, .1)");
+        document.body.id = "dark";
+    }
+}
+
+function nav_menu() {
+    document.getElementById("nav-menu").style.width = "90vw";
+    document.getElementById("side-navbar-close-btn").style.transform = "rotate(90deg)";
+}
+
+
+function closeNav() {
+    document.getElementById("nav-menu").style.width = "0";
+    document.getElementById("side-navbar-close-btn").style.transform = "rotate(0deg)";
 }

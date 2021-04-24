@@ -1,0 +1,235 @@
+#main {
+    width: 100%;
+    color: var(--text-color);
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    z-index: 0;
+    #container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        z-index: 3;
+        .card {
+            aspect-ratio: 4/6;
+            width: 200px;
+            padding: 12px;
+            background-color: var(--card-bg-color);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid var(--text-color);
+            transition: .2s linear;
+            cursor: pointer;
+            .content {
+                color: var(--text-color);
+                font-family: Roboto, serif;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .ratings {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: .8rem;
+                }
+                h1 {
+                    position: absolute;
+                    top: calc(45% - 4rem);
+                    left: -15px;
+                    font-size: 8rem;
+                }
+            }
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+    }
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 30px;
+        text-align: center;
+        z-index: 2;
+    }
+    #pop-up-window {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 50;
+        .container {
+            position: relative;
+            top: calc(50vh - 40vh);
+            left: calc(50vw - 30vw);
+            padding: 20px;
+            width: 60vw;
+            height: 80vh;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 30px calc(80vh - 150px) 60px;
+            grid-gap: 10px;
+            font-family: Roboto, serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 2px solid white;
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                h1 {
+                    font-size: 1.5rem;
+                }
+                #close {
+                    height: 100%;
+                    width: 30px;
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    color: white;
+                }
+                #close:hover {
+                    backdrop-filter: blur(2px);
+                }
+            }
+            .design-windows {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                .desktop {
+                    text-align: center;
+                    height: 100%;
+                    padding: 0 5px 0 0;
+                    overflow: hidden !important;
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+                .mobile {
+                    text-align: center;
+                    height: 100%;
+                    padding: 0 0 0 5px;
+                    overflow: hidden !important;
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+            .buttons {
+                position: relative;
+                bottom: 0;
+                display: flex;
+                justify-content: space-evenly;
+                gap: 10px;
+                height: 100%;
+                .btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    color: white;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    backdrop-filter: blur(2px);
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                    transition: .1s ease-in-out;
+                    span {
+                        margin-right: 5px;
+                    }
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+                .btn:hover {
+                    color: rgb(255, 255, 255);
+                }
+                .download:hover {
+                    background: rgb(0, 206, 69);
+                }
+                .visit:hover {
+                    background: rgb(0, 194, 228);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #main {
+        padding: 50px 10px;
+        #container {
+            .card {
+                width: 250px;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                .content {
+                    h1 {
+                        top: calc(45% - 5rem);
+                        font-size: 10rem;
+                    }
+                    .ratings {
+                        font-size: 1rem;
+                    }
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+            .card:hover {
+                transform: translateY(0);
+            }
+        }
+        #pop-up-window {
+            .container {
+                height: auto;
+                width: 80vw;
+                position: relative;
+                top: calc(50vh - 20vh);
+                left: calc(50vw - 40vw);
+                display: flex;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(12px);
+                .header {
+                    color: white;
+                    #close {
+                        font-size: 30px;
+                    }
+                }
+                .design-windows {
+                    display: none;
+                }
+                .buttons {
+                    display: flex;
+                    flex-direction: column;
+                    .btn {
+                        font-size: 1.25rem;
+                        height: 10vh;
+                    }
+                }
+            }
+        }
+    }
+}

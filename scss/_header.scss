@@ -1,0 +1,167 @@
+header {
+    padding: 25px 0;
+    height: 100vh;
+    width: 100%;
+    color: var(--text-color);
+    nav {
+        padding: 0 50px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        .logo {
+            font-size: 1.3rem;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 2;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            .logo-icon {
+                height: 40px;
+                width: 40px;
+                margin-right: 20px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .nav-items {
+            display: flex;
+            align-items: center;
+            ul {
+                list-style: none;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .dark-light {
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: .7s ease-in-out;
+                }
+            }
+            li {
+                margin: 0 20px;
+                cursor: pointer;
+                letter-spacing: 1px;
+                transition: .1s ease-in-out;
+            }
+            .nav-item:hover {
+                transform: scale(1.05);
+                color: var(--text-color-hover)
+            }
+            span {
+                display: none;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            .sidenav {
+                display: none;
+            }
+        }
+    }
+    section {
+        height: 100%;
+        width: 100%;
+        .h-header,
+        .a-header,
+        .c-header {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            transition: 1s ease-in-out;
+            h1 {
+                z-index: 4;
+                font-size: 15vmin;
+                font-family: Roboto, Serif;
+                width: auto;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 80vh;
+        nav {
+            padding: 0 20px;
+            z-index: 100;
+            .logo {
+                font-size: 1.5rem;
+                color: var(--text-color);
+                .logo-icon {
+                    height: 30px;
+                    width: 30px;
+                    margin-right: 10px;
+                }
+            }
+            .nav-items {
+                li {
+                    margin: 0;
+                }
+                .nav-item {
+                    display: none;
+                }
+                span {
+                    display: block;
+                    font-size: 23px;
+                    padding: 0 0 2px 0;
+                }
+                .sidenav {
+                    display: block;
+                    height: 70%;
+                    width: 0;
+                    position: fixed;
+                    z-index: 1000;
+                    top: 0;
+                    right: -2px;
+                    color: var(--text-color);
+                    background-color: var(--card-bg-color);
+                    backdrop-filter: blur(10px);
+                    overflow-x: hidden;
+                    transition: 0.5s;
+                    border-left: 2px solid var(--text-color);
+                    border-bottom: 2px solid var(--text-color);
+                    span {
+                        float: right;
+                        color: white;
+                        font-size: 2.5rem;
+                        margin: 15px 25px 0 0;
+                        user-select: none;
+                        transition: .3s ease;
+                    }
+                    ul {
+                        height: 80%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        li.side-nav-item {
+                            display: hidden;
+                            font-size: 1.7rem;
+                            padding: 20px;
+                            font-weight: 600;
+                            transition: .7s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+        section {
+            .h-header {
+                flex-direction: column;
+                h1 {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+}
