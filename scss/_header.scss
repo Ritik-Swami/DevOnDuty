@@ -70,19 +70,31 @@ header {
         .h-header,
         .a-header,
         .c-header {
-            width: 100%;
             height: 100%;
+            width: 100%;
             display: flex;
             justify-content: center;
             text-align: center;
             align-items: center;
             transition: 1s ease-in-out;
-            h1 {
-                z-index: 4;
-                font-size: 15vmin;
-                font-family: Roboto, Serif;
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: auto;
-                margin: 0 10px;
+                height: auto;
+                padding: 20px;
+                border-radius: 10px;
+                border: 2px solid var(--text-color);
+                backdrop-filter: blur(5px);
+                h1 {
+                    padding: 20px 0;
+                    width: auto;
+                    margin: 0 10px;
+                    font-family: Roboto, Serif;
+                    font-size: 15vmin;
+                    z-index: 4;
+                }
             }
         }
     }
@@ -157,9 +169,14 @@ header {
         }
         section {
             .h-header {
-                flex-direction: column;
-                h1 {
-                    font-size: 5rem;
+                .container {
+                    flex-direction: column;
+                    box-shadow: 0 0 20px inset var(--card-bg-color);
+                    backdrop-filter: blur(4px);
+                    h1 {
+                        padding: 0 10px;
+                        font-size: 4rem;
+                    }
                 }
             }
         }

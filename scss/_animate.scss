@@ -1,58 +1,58 @@
-#animate {
-    .animate {
+section#animate {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: -1000;
+    overflow-x: hidden;
+    .circle {
         position: absolute;
+        height: 80px;
+        width: 80px;
+        border: 2px solid var(--text-color);
         border-radius: 50%;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        z-index: 1;
-        transition: .2s linear;
+        animation: circle 1.5s linear infinite;
     }
-    .a-1 {
-        top: -50vh;
-        left: -50vh;
-        height: 100vmin;
-        width: 100vmin;
-        border: 2px solid rgb(255, 255, 255);
-        background-image: linear-gradient(to top left, red, blue);
+    .square {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border: 2px solid var(--text-color);
+        animation: square 2s linear infinite;
     }
-    .a-2 {
-        top: 50vh;
-        right: -50vh;
-        height: 100vmin;
-        width: 100vmin;
-        border: 2px solid rgb(255, 255, 255);
-        background-image: linear-gradient(to top left, red, blue);
+    @keyframes circle {
+        0% {
+            transform: scale(.1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
-    .a-3 {
-        top: 90vh;
-        left: -10vh;
-        height: 50vmin;
-        width: 50vmin;
-        border: 2px solid rgb(255, 255, 255);
-        background-image: linear-gradient(to top left, red, blue);
-    }
-    .a-4 {
-        top: 20vh;
-        right: 30vw;
-        height: 30vmin;
-        width: 30vmin;
-        border: 2px solid rgb(255, 255, 255);
-        background-image: linear-gradient(to top right, rgb(21, 180, 0), rgb(0, 183, 255));
-    }
-    .a-5 {
-        top: -50vh;
-        left: -50vh;
-        height: 100vmin;
-        width: 100vmin;
-        border: 2px solid rgb(255, 255, 255);
-        background-image: linear-gradient(to top left, red, blue);
-    }
-    .animate:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    @keyframes square {
+        0% {
+            transform: scale(.1);
+        }
+        25% {
+            transform: scale(1);
+        }
+        50% {
+            transform: rotate(360deg);
+        }
+        75% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: scale(.1);
+        }
     }
 }
 
 @media only screen and (max-width: 600px) {
-    #animate {
-        display: none;
+    section#animate {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
     }
 }

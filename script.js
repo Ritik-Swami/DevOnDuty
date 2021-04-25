@@ -160,3 +160,26 @@ function closeNav() {
     document.getElementById("nav-menu").style.width = "0";
     document.getElementById("side-navbar-close-btn").style.transform = "rotate(0deg)";
 }
+
+function animation() {
+    const animate = document.querySelector('#animate');
+    const createCircleElement = document.createElement('span');
+    createCircleElement.className = "circle";
+    const createSquareElement = document.createElement('span');
+    createSquareElement.className = "square";
+
+    createCircleElement.style.top = Math.random() * (innerHeight - 100) + "px";
+    createCircleElement.style.left = Math.random() * (innerWidth - 50) + "px";
+    createSquareElement.style.top = Math.random() * (innerHeight - 100) + "px";
+    createSquareElement.style.left = Math.random() * (innerWidth - 30) + "px";
+    animate.appendChild(createCircleElement);
+    animate.appendChild(createSquareElement);
+
+    setTimeout(() => {
+        createCircleElement.remove()
+    }, 1500)
+    setTimeout(() => {
+        createSquareElement.remove()
+    }, 2000)
+}
+setInterval(animation, 1100)

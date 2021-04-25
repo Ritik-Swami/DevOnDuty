@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+    <section>
+        <h1>Animation</h1>
+    </section>
+    <script type="text/javascript">
+        function animation() {
+            const section = document.querySelector('section');
+            const createCircleElement = document.createElement('span');
+            createCircleElement.className = "circle";
+            const createSquareElement = document.createElement('span');
+            createSquareElement.className = "square";
+
+            createCircleElement.style.top = Math.random() * (innerHeight - 80) + "px";
+            createCircleElement.style.left = Math.random() * (innerWidth - 80) + "px";
+            createSquareElement.style.top = Math.random() * (innerHeight - 50) + "px";
+            createSquareElement.style.left = Math.random() * (innerWidth - 50) + "px";
+            section.appendChild(createCircleElement);
+            section.appendChild(createSquareElement);
+
+            setTimeout(() => {
+                createCircleElement.remove()
+            }, 1500)
+            setTimeout(() => {
+                createSquareElement.remove()
+            }, 2000)
+        }
+        setInterval(animation, 500)
+    </script>
+</body>
+
+</html>
