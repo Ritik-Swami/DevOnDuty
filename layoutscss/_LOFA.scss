@@ -1,0 +1,11 @@
+.LOFA {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+}

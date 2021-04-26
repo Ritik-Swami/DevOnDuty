@@ -13,7 +13,7 @@ section#animate {
         width: 80px;
         border: 2px solid var(--text-color);
         border-radius: 50%;
-        animation: circle 1.5s linear infinite;
+        animation: circle 1.5s ease-in-out infinite;
     }
     .square {
         position: absolute;
@@ -28,6 +28,7 @@ section#animate {
         }
         100% {
             transform: scale(1);
+            opacity: 0;
         }
     }
     @keyframes square {

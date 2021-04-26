@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px rgba(255, 255, 255, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(red, blue);
+    outline: 0px solid slategrey;
+}
+
+// Flex Center
+.f-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8);
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin-top: #{$space}rem;
+        margin-bottom: #{$space}rem;
+    }
+    .mx-#{$space} {
+        margin-right: #{$space}rem;
+        margin-left: #{$space}rem;
+    }
+    .mt-#{$space} {
+        margin-top: #{$space}rem;
+    }
+    .mb-#{$space} {
+        margin-bottom: #{$space}rem;
+    }
+    .ml-#{$space} {
+        margin-left: #{$space}rem;
+    }
+    .mr-#{$space} {
+        margin-right: #{$space}rem;
+    }
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding-top: #{$space}rem;
+        padding-bottom: #{$space}rem;
+    }
+    .px-#{$space} {
+        padding-left: #{$space}rem;
+        padding-right: #{$space}rem;
+    }
+    .pt-#{$space} {
+        padding-top: #{$space}rem;
+    }
+    .pb-#{$space} {
+        padding-bottom: #{$space}rem;
+    }
+    .pl-#{$space} {
+        padding-left: #{$space}rem;
+    }
+    .pr-#{$space} {
+        padding-right: #{$space}rem;
+    }
+    .fs-#{$space} {
+        font-size: #{$space}rem;
+    }
+    .br-#{$space} {
+        border-radius: #{$space};
+    }
+    .bdf-#{$space} {
+        backdrop-filter: blur(#{$space});
+    }
+    .bb-#{$space} {
+        border: #{$space}px solid black;
+    }
+    .bw-#{$space} {
+        border: #{$space}px solid white;
+    }
+}
+
+$colors: ("white", "black", "gray", "green", "blue", "lightblue", "yellow", "silver", "orange");
+@each $color in $colors {
+    .txt-#{$color} {
+        color: #{$color};
+    }
+    .bg-#{$color} {
+        background: #{$color};
+    }
+}
+
+$sizes: (100, 80, 60, 50, 40, 20, 10, 0);
+$dimentions: ("100", "80", "60", "50", "40", "20", "10", "0");
+@each $size in $sizes {
+    .vhw-#{$size} {
+        height: #{size}vh;
+        width: #{size}vw;
+    }
+    .vh-#{$size} {
+        height: #{$size}vh;
+    }
+    .vw-#{$size} {
+        width: #{$size}vw;
+    }
+}
+
+.vhwp-100 {
+    height: 100%;
+    width: 100%;
+}
+
+.vhp-100 {
+    height: 100%;
+}
+
+.vwp-100 {
+    width: 100%;
+}
+
+.vhp-50 {
+    height: 50%;
+}
+
+.vwp-50 {
+    width: 50%;
+}
+
+@import "layoutscss/LOFA";
