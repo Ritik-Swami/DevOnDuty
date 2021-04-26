@@ -1,2 +1,2 @@
 # DevOnDuty
-Provides Free websites to all users.
+Free Website Layout and Designs.
