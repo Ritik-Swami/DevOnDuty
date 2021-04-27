@@ -77,8 +77,8 @@ xhr.onload = function() {
                 "<h2>" + card[i].title + "</h2>" +
                 "<h1>" + card[i].card + "</h1>" +
                 "<div class='ratings'>" +
-                "<span>" + card[i].downloads + " Download</span>" +
-                "<span>" + card[i].reviews + " Reviews</span>" +
+                "<span><p>Download</p>" + card[i].downloads + "</span>" +
+                "<span><p>Reviews</p>" + card[i].reviews + "</span>" +
                 "</div>" +
                 "</div>" +
                 "</div>"

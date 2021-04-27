@@ -155,7 +155,6 @@ function nav_menu() {
     document.getElementById("side-navbar-close-btn").style.transform = "rotate(90deg)";
 }
 
-
 function closeNav() {
     document.getElementById("nav-menu").style.width = "0";
     document.getElementById("side-navbar-close-btn").style.transform = "rotate(0deg)";
