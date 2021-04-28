@@ -259,7 +259,7 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     #main {
         padding: 50px 10px;
         #container {
@@ -295,6 +295,7 @@
         #pop-up-window {
             .container {
                 height: auto;
+                width: 80vw;
                 position: relative;
                 top: calc(50vh - 20vh);
                 left: calc(50vw - 40vw);
