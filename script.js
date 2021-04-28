@@ -17,7 +17,7 @@ function close_popup(window) {
 function display_pop_up(e) {
     const web_container_data = document.getElementById(e);
     document.getElementById('pop-up-window').style.display = 'block';
-
+    var id, title, desktop_img, mobile_img, download_link, preview_link, data;
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'cards.json', true);
@@ -27,17 +27,26 @@ function display_pop_up(e) {
             var card = JSON.parse(this.responseText);
             for (var i in card) {
                 if (card[i].id == e) {
-                    document.getElementById('card-title').innerHTML = card[i].title;
-                    document.getElementById('desktop-img').src = card[i].desktopimg;
-                    document.getElementById('mobile-img').src = card[i].mobileimg;
-                    document.getElementById('download_link').id = card[i].download_link;
-                    document.getElementById('visit_link').id = card[i].visit_link;
+                    id = card[i].id;
+                    title = card[i].title;
+                    desktop_img = card[i].desktop_img;
+                    mobile_img = card[i].mobile_img;
+                    download_link = card[i].download_link;
+                    preview_link = card[i].preview_link;
                 };
             }
         }
+        console.log(title, desktop_img, download_link, preview_link)
+        document.getElementById('card-title').innerHTML = title;
+        document.getElementById('desktop-img').src = desktop_img;
+        document.getElementById('mobile-img').src = mobile_img;
+        var btn_download = document.querySelector('#download_link');
+        btn_download.setAttribute('name', download_link);
+        var btn_preview = document.querySelector('#preview_link');
+        btn_preview.setAttribute('name', preview_link);
     }
-
     xhr.send();
+
 }
 
 function link(id) {
@@ -198,6 +207,7 @@ function resize(e) {
 }
 
 function preview_window(e) {
+    var link = document.getElementById(e).getAttribute('name');
     document.getElementById('preview-window').style.display = 'block';
-    document.getElementById('frame').src = e;
+    const preview = document.getElementById('frame').src = link;
 }

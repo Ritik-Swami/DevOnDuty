@@ -85,7 +85,7 @@ header {
                 flex-direction: column;
                 width: auto;
                 height: auto;
-                padding: 15px 2px;
+                padding: 20px 15px 10px 15px;
                 border-radius: 10px;
                 font-family: Roboto, Serif;
                 background: rgba(255, 255, 255, 0.1);
@@ -174,14 +174,17 @@ header {
         }
         section {
             .h-header {
+                padding: 0 40px;
                 .container {
+                    padding: 20px 0;
                     flex-direction: column;
                     backdrop-filter: blur(4px);
                     h2 {
-                        margin-bottom: 20px;
+                        padding: 0;
+                        margin-bottom: 40px;
                     }
                     h1 {
-                        padding: 0 10px;
+                        padding: 0;
                         font-size: 1.4rem;
                         letter-spacing: 1px;
                     }
