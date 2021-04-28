@@ -1,26 +1,28 @@
 <h2>Layouts</h2>
 <div id="container"></div>
 <div id="pop-up-window">
-    <div class="container">
-        <div class="header">
-            <h1 id="card-title">Page Name</h1>
-            <div id="close" onclick="close_popup(this.id)">&times;</div>
-        </div>
-        <div class="design-windows">
-            <div class="desktop" id="desktop">
-                <img src="" alt="Desktop Design" id="desktop-img">
+    <div class="center">
+        <div class="container">
+            <div class="header">
+                <h1 id="card-title">Page Name</h1>
+                <div id="close" onclick="close_popup(this.id)">&times;</div>
             </div>
-            <div class="mobile">
-                <img src="" alt="Mobile Design" id="mobile-img">
+            <div class="design-windows">
+                <div class="desktop" id="desktop">
+                    <img src="" alt="Desktop Design" id="desktop-img">
+                </div>
+                <div class="mobile">
+                    <img src="" alt="Mobile Design" id="mobile-img">
+                </div>
             </div>
-        </div>
-        <div class="buttons">
-            <div id="download_link" class="download btn" name="download" onclick="link(this.id)">
-                <span>Download</span>
-                <i class="fa fa-download"></i>
+            <div class="buttons">
+                <div id="download_link" class="download btn" name="download" onclick="link(this.id)">
+                    <span>Download</span>
+                    <i class="fa fa-download"></i>
+                </div>
+                <div id="preview_link" class="preview btn" name="preview" onclick="preview_window(this.id)"><span>Preview</span>
+                    <i class="fa fa-eye"></i></div>
             </div>
-            <div id="preview_link" class="preview btn" name="preview" onclick="preview_window(this.id)"><span>Preview</span>
-                <i class="fa fa-eye"></i></div>
         </div>
     </div>
 </div>
