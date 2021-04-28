@@ -72,7 +72,7 @@ xhr.onload = function() {
         var card = JSON.parse(this.responseText);
         var output = '';
         for (var i in card) {
-            output += "<div class='card' id='" + card[i].id + "' onclick='display_container(this.id)'>" +
+            output += "<div class='card' id='" + card[i].id + "' onclick='display_pop_up(this.id)'>" +
                 "<div class='content'>" +
                 "<h2>" + card[i].title + "</h2>" +
                 "<h1>" + card[i].card + "</h1>" +

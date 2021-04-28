@@ -4,7 +4,7 @@
     <div class="container">
         <div class="header">
             <h1 id="card-title">Page Name</h1>
-            <div id="close" onclick="close_popup()">&times;</div>
+            <div id="close" onclick="close_popup(this.id)">&times;</div>
         </div>
         <div class="design-windows">
             <div class="desktop" id="desktop">
@@ -19,8 +19,21 @@
                 <span>Download</span>
                 <i class="fa fa-download"></i>
             </div>
-            <div id="visit_link" class="visit btn" onclick="link(this.id)"><span>Preview</span>
+            <div id="visit_link" class="visit btn" onclick="preview_window(this.id)"><span>Preview</span>
                 <i class="fa fa-eye"></i></div>
+        </div>
+    </div>
+</div>
+<div id="preview-window">
+    <div class="container">
+        <section>
+            <span class="material-icons" id="desktop" onClick="resize(this.id)">desktop_windows</span>
+            <span class="material-icons" id="tablet" onClick="resize(this.id)">tablet_mac</span>
+            <span class="material-icons" id="mobile" onClick="resize(this.id)">phone_iphone</span>
+        </section>
+        <div id="close-preview" onclick="close_popup(this.id)">&times;</div>
+        <div class="container">
+            <iframe src="layouts" frameborder="0" id="frame" class="desktop"></iframe>
         </div>
     </div>
 </div>

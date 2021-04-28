@@ -72,6 +72,7 @@ header {
         .c-header {
             height: 100%;
             width: 100%;
+            padding: 10px;
             display: flex;
             justify-content: center;
             text-align: center;
@@ -81,20 +82,23 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: row;
+                flex-direction: column;
                 width: auto;
                 height: auto;
-                padding: 20px;
+                padding: 15px 2px;
                 border-radius: 10px;
-                border: 2px solid var(--text-color);
+                font-family: Roboto, Serif;
+                background: rgba(255, 255, 255, 0.1);
                 backdrop-filter: blur(5px);
                 h1 {
                     padding: 20px 0;
                     width: auto;
                     margin: 0 10px;
-                    font-family: Roboto, Serif;
-                    font-size: 15vmin;
+                    font-size: 2rem;
                     z-index: 4;
+                }
+                h2 {
+                    color: rgb(92, 92, 92);
                 }
             }
         }
@@ -108,7 +112,7 @@ header {
             padding: 0 20px;
             z-index: 100;
             .logo {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 color: var(--text-color);
                 .logo-icon {
                     height: 30px;
@@ -172,11 +176,14 @@ header {
             .h-header {
                 .container {
                     flex-direction: column;
-                    box-shadow: 0 0 20px inset var(--card-bg-color);
                     backdrop-filter: blur(4px);
+                    h2 {
+                        margin-bottom: 20px;
+                    }
                     h1 {
                         padding: 0 10px;
-                        font-size: 4rem;
+                        font-size: 1.4rem;
+                        letter-spacing: 1px;
                     }
                 }
             }

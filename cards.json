@@ -6,7 +6,7 @@
         "desktopimg": "assets/web-desktop-images/LOFA.png",
         "mobileimg": "assets/web-mobile-images/LOFA.png",
         "download_link": "https://github.com/Ritik-Swami-Jr/LOFA/archive/refs/heads/master.zip",
-        "visit_link": "preview.html",
+        "visit_link": "layouts/LOFA.html",
         "downloads": 1236,
         "reviews": 4.8
     },
@@ -18,9 +18,9 @@
         "desktopimg": "assets/web-desktop-images/2.png",
         "mobileimg": "assets/web-mobile-images/2.jpg",
         "download_link": "https://www.google.comhttps://github.com/Ritik-Swami-Jr/LOFA/archive/refs/heads/master.zip",
-        "visit_link": "preview.html",
+        "visit_link": "layouts/LOFA.html",
         "downloads": 456,
-        "reviews": 3.9
+        "reviews": 4.1
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "desktopimg": "../assets/web-desktop-images/3.jpg",
         "mobileimg": "../assets/web-mobile-images/2.jpg",
         "download_link": "https://www.google.comhttps://github.com/Ritik-Swami-Jr/LOFA/archive/refs/heads/master.zip",
-        "visit_link": "preview.html",
+        "visit_link": "layouts/LOFA.html",
         "downloads": 324,
         "reviews": 4.5
     },
@@ -42,7 +42,7 @@
         "desktopimg": "assets/web-desktop-images/4.jpg",
         "mobileimg": "assets/web-mobile-images/2.jpg",
         "download_link": "https://www.google.comhttps://github.com/Ritik-Swami-Jr/LOFA/archive/refs/heads/master.zip",
-        "visit_link": "preview.html",
+        "visit_link": "index.html",
         "downloads": 16,
         "reviews": 4.3
     }
