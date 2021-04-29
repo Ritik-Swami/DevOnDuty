@@ -127,7 +127,7 @@
                     display: grid;
                     grid-template-columns: calc(70% - 10px) 30%;
                     .desktop {
-                        padding: 5px;
+                        padding: 5px 5px 1px 5px;
                         text-align: center;
                         height: 100%;
                         width: 100%;
@@ -145,7 +145,7 @@
                         height: 100%;
                         width: 100%;
                         margin-left: 10px;
-                        padding: 5px;
+                        padding: 5px 5px 2px 5px;
                         background: white;
                         overflow-x: hidden;
                         overflow-y: scroll !important;

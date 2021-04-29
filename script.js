@@ -17,7 +17,7 @@ function close_popup(window) {
 function display_pop_up(e) {
     const web_container_data = document.getElementById(e);
     document.getElementById('pop-up-window').style.display = 'block';
-    var id, title, desktop_img, mobile_img, download_link, preview_link, data;
+    var id, title, desktop_img, mobile_img, download_link, preview_link;
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'cards.json', true);
@@ -176,8 +176,6 @@ function nav_menu() {
     document.getElementById("side-navbar-close-btn").style.transform = "rotate(90deg)";
 }
 
-function closeNav() {}
-
 function animation() {
     const animate = document.querySelector('#animate');
     const createCircleElement = document.createElement('span');
@@ -210,4 +208,9 @@ function preview_window(e) {
     var link = document.getElementById(e).getAttribute('name');
     document.getElementById('preview-window').style.display = 'block';
     const preview = document.getElementById('frame').src = link;
+}
+
+function download_btn(e) {
+    var link = document.getElementById(e).getAttribute('name');
+    window.open(link, "_blank");
 }

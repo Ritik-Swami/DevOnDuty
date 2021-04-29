@@ -1,0 +1,102 @@
+body.JORA {
+    font-family: sans-serif;
+    nav {
+        width: 100%;
+        padding: 20px 0;
+        // border: 1px solid black;
+        text-align: center;
+        font-size: 1rem;
+        background: #ccc;
+    }
+    header {
+        height: calc(100vh - 40px - 1rem);
+        width: 100%;
+        padding: 20px;
+        margin: 5px 0;
+        background: #ccc;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: auto 300px;
+        grid-gap: 5px;
+        margin: 5px 0;
+        main {
+            height: 70vh;
+            width: 100%;
+            background: #ccc;
+            padding: 20px;
+        }
+        .sidebar {
+            height: auto;
+            min-height: 100px;
+            width: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+    }
+    .photos {
+        padding: 0 50px 0 50px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        background: #ccc;
+        margin: 5px 0;
+        h2 {
+            font-size: 2rem;
+            width: auto;
+            text-align: center;
+            margin: 30px 0;
+            grid-column: 1 / span 3;
+        }
+        .pics {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 50px;
+            .pic-1,
+            .pic-2,
+            .pic-3 {
+                width: 250px;
+                border: 1px solid white;
+                aspect-ratio: 3/4;
+                border-radius: 10px;
+                padding: 10px;
+                color: white;
+                background-image: linear-gradient(to top left, #aaa, #888);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.616);
+            }
+        }
+    }
+    footer {
+        font-size: 1rem;
+        padding: 20px 0;
+        text-align: center;
+        background: #ccc;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    body.JORA {
+        .container {
+            grid-template-columns: 1fr;
+            main {
+                width: 100%;
+                min-height: 100px;
+            }
+            .sidebar {
+                width: 100%;
+                min-height: 200px;
+            }
+        }
+        .photos {
+            .pics {
+                gap: 50px;
+            }
+        }
+    }
+}
