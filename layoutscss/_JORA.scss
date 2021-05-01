@@ -43,6 +43,7 @@ body.JORA {
         justify-items: center;
         align-items: center;
         background: #ccc;
+        color: #333;
         margin: 5px 0;
         h2 {
             font-size: 2rem;
@@ -62,13 +63,13 @@ body.JORA {
             .pic-2,
             .pic-3 {
                 width: 250px;
-                border: 1px solid white;
-                aspect-ratio: 3/4;
+                height: auto;
+                min-height: 200px;
                 border-radius: 10px;
                 padding: 10px;
                 color: white;
-                background-image: linear-gradient(to top left, #aaa, #888);
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.616);
+                background-image: linear-gradient(to top left, #bbb, #aaa);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
             }
         }
     }
