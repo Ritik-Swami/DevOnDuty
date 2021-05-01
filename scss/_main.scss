@@ -296,7 +296,7 @@
             gap: 20px;
             .line {
                 width: 200px;
-                min-width: 120px;
+                min-width: 100px;
                 height: auto;
                 display: flex;
                 flex-direction: column;
@@ -505,6 +505,7 @@
                 gap: 8px;
                 .line {
                     width: 45vw;
+                    min-width: 100px;
                     gap: 8px;
                 }
             }
