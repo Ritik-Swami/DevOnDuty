@@ -473,22 +473,24 @@
 }
 
 @media only screen and (min-height:1000px) {
-    #main {
-        #preview-window {
-            .container {
+    .gallery {
+        #main {
+            #preview-window {
                 .container {
-                    iframe {
-                        box-shadow: 0 0 10px #444;
-                        border-radius: 5px;
-                    }
-                    iframe.desktop {
-                        height: 40%;
-                    }
-                    iframe.tablet {
-                        height: 50%;
-                    }
-                    iframe.mobile {
-                        height: 50%;
+                    .container {
+                        iframe {
+                            box-shadow: 0 0 10px #444;
+                            border-radius: 5px;
+                        }
+                        iframe.desktop {
+                            height: 40%;
+                        }
+                        iframe.tablet {
+                            height: 50%;
+                        }
+                        iframe.mobile {
+                            height: 50%;
+                        }
                     }
                 }
             }
@@ -497,12 +499,14 @@
 }
 
 @media only screen and (max-width:500px) {
-    .gallery {
-        .container {
-            gap: 8px;
-            .line {
-                width: 45vw;
+    #main {
+        .gallery {
+            .container {
                 gap: 8px;
+                .line {
+                    width: 45vw;
+                    gap: 8px;
+                }
             }
         }
     }
