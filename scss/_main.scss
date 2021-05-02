@@ -1,11 +1,10 @@
 #main {
     width: 100%;
     color: var(--text-color);
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     flex-direction: column;
     z-index: 0;
-    h1 {
+    h1.layout-heading {
         font-family: 'Roboto', sans-serif;
         margin-bottom: 50px;
         text-align: center;
@@ -284,6 +283,7 @@
         height: auto;
         padding: 50px 0;
         h1 {
+            font-family: 'Roboto', sans-serif;
             text-align: center;
             margin-bottom: 50px;
         }
@@ -347,8 +347,7 @@
         padding: 50px 10px;
         #container {
             .card {
-                width: 60vw;
-                margin-bottom: 40px;
+                margin-bottom: 10px;
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
                 -khtml-user-select: none;
@@ -436,7 +435,7 @@
             margin-bottom: 50px;
         }
         #container {
-            gap: 20px;
+            gap: 10px;
             .card {
                 width: 180px;
                 -webkit-touch-callout: none;

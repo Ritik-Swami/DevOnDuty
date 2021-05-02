@@ -91,4 +91,4 @@ function loadData() {
     xhr.send();
 }
 
-loadData()
+loadData();
